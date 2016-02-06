@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>r2 d2 sounds</title>
+</head>
+
+<body>
+<pre style="font-size:x-small;">
+    
+            8888888888  888    88888
+        88     88   88 88   88  88
+        8888  88  88   88  88888
+            88 88 888888888 88   88
+    88888888  88 88     88 88    888888
+
+    88  88  88   888    88888    888888
+    88  88  88  88 88   88  88  88
+    88 8888 88 88   88  88888    8888
+        888  888 888888888 88   88     88
+        88  88  88     88 88    8888888
+ 
+ 
+ 
+ 
+                    ,-----.                                                      
+                ,'_/_|_\_`.                                                    
+                /<<::8[O]::>\  
+                _|-----------|_                                                  
+            :::|  | ====-=- |  |:::                                              
+            :::|  | -=-==== |  |:::                                              
+            :::\  | ::::|()||  /:::                                              
+            ::::| | ....|()|| |::::                                              
+                | |_________| |                                                  
+                | |\_______/| |                 
+                /   \ /   \ /   \                                                 
+                `---' `---' `---'                                                 
+ 
+</pre>
+
+<h1>R2 D2</h1>
+<p>Plays random R2 D2 sound every 5 seconds. <span id="filename"></span></p>
+
+
+
+<script>
+    var items = [
+        'QSCANING.mp3', 
+        'QSNTNC16.mp3', 
+        'QSNTNC4.mp3',  
+        'QWORD22.mp3',  
+        'QWORD9.mp3', 
+        'QSNTNC10.mp3', 
+        'QSNTNC18.mp3', 
+        'QWORD1.mp3', 
+        'QWORD4.mp3',
+        'QSNTNC13.mp3', 
+        'QSNTNC20.mp3', 
+        'QWORD16.mp3',  
+        'QWORD8.mp3',
+        'QWORD9.mp3'
+        ];
+
+    setInterval(function() {
+        var file = items[Math.floor(Math.random()*items.length)];
+        audio = new Audio(file);
+        document.getElementById("filename").innerText = file;
+        audio.play();
+        
+        
+    }, 5000);
+</script>
+
+
+</body>
+
+</html>
